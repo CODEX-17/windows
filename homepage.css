@@ -1,0 +1,500 @@
+@font-face {
+    font-family: 'raster';
+    src: url('fonts/raster.ttf');
+  }
+
+  @font-face {
+    font-family: 'clan';
+    src: url('fonts/clan.ttf');
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: raster;
+    background-image: url(image/bg-windows.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: raster;
+    font-weight: normal;
+    padding: 10px;
+    gap: 10px;
+}
+
+.left-side {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+.left-side img {
+    width: 20px;
+    height: 20px;
+}
+
+.left-side h1{
+    font-size: 10pt;
+    letter-spacing: 1px;
+}
+
+.right-side {
+    position: absolute;
+    right: 30px;
+    
+    gap: 50px;
+}
+
+.right-side span{
+    cursor: pointer;
+    margin-left: 10px;
+}
+#exit:hover {
+    background-color: red;
+
+}
+
+#log{
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+}
+
+#log:hover {
+    background-color: gray;
+}
+
+.logg{
+    position: relative;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar{
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.70);
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.valo {
+    animation: fade 1s ease;
+    width: 50%;
+    height: 50%;
+    background-image: url(image/bg-valo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 5pt;
+}
+
+.valo-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left-valo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-valo img {
+    width: 800px;
+    height: 800px;
+    margin-bottom: 50px;
+    animation: leftFade 1s ease;
+}
+
+.right-valo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.right-valo img {
+    width: 290px;
+    height: 150px;
+    animation: blinksz 0.5s 1s ease infinite;
+}
+
+.right-valo h1 {
+    color: black;
+    font-family: clan;
+    font-size: 25pt;
+    letter-spacing: 3px;
+    animation: upfade 1s 2s ease forwards;
+
+}
+.right-valo button {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    font-family: clan;
+    font-size: 15pt;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#sound-effect {
+    display: none;
+}
+
+.btn-list {
+    display: flex;
+    gap: 10px;
+}
+
+.right-valo button:hover {
+    background-color: white;
+    color: black;
+}
+
+.right-valo p {
+    font-size: 10pt;
+    font-family: monospace;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.logout-box{
+    animation: fade 0.1s;
+    display: none;
+    width: 500px;
+    height: 250px;
+    background-color: white;
+}
+
+.logout-box-head{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+
+.logout-box-head h1 {
+    color: gray;
+    font-size: 10pt;
+    margin-left: 10px;
+}
+
+.logout-box-body{
+    width: 100%;
+    height: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7pt;
+    gap: 10px;
+}
+
+.logout-box-body img {
+    width: 45px;
+    height: 45px;
+}
+
+
+
+.logout-box-foot{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(196, 196, 196, 0.8);
+    width: 100%;
+    height: 50px;
+}
+
+.logout-box-foot button{
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+.panel {
+    display: none;
+    animation: fade 0.5s;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.command h1{
+    color: white;
+    font-size: 13pt;
+    padding: 10px;
+    outline: none;
+    border: none;
+    text-align: justify;
+    
+}
+
+.command {
+    display: flex;
+}
+
+#typeText, #typeTexts {
+    position: relative;
+    width: max-content;
+}
+
+
+#typeText::before,
+#typeText::after,
+#typeTexts::after,
+#typeTexts::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#typeText::before {
+    background-color: rgb(0, 0, 0);
+    animation: type 19s steps(68) forwards;
+}
+#typeText::after {
+    width: 0.125em;
+    height: 25pt;
+    background-color: rgb(255, 255, 255);
+    animation: type 19s steps(68) forwards,
+    fade 0.5s steps(68) infinite,
+    opas 0.5s 20s infinite;
+}
+
+#typeTexts::before {
+    background-color: rgb(0, 0, 0);
+    animation: type 19s steps(67) 21s forwards;
+}
+#typeTexts::after {
+    opacity: 0;
+    width: 0.125em;
+    height: 25pt;
+    background-color: rgb(255, 255, 255);
+    animation: type 19s steps(67) 21s forwards,
+    fade 0.5s steps(67) 21s infinite,
+    opas 0.5s 40s infinite;
+}
+
+#title-type{
+    opacity: 0;
+    animation: dis 0.5s 20s forwards;
+}
+
+
+
+@keyframes type {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+   to {
+    background-color: transparent;
+   }
+}
+
+@keyframes opas {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes dis {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blinksz {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes upfade {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes leftFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+.icons{
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+
+.icon-one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.icon-one button, img {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+}
+
+.icon-one p {
+    color: white;
+    font-size: 11pt;
+}
+.footer {
+    width: 100%;
+    height: 40px;
+    background-color: #1e5077;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer button img {
+    width: 20px;
+    height: 20px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+
+
+
+.footer button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer button img:hover {
+    background-color: gray; 
+}
+
+.footer input{
+    height: 98%;
+    width: 270px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 10pt;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+
+
+
+
+

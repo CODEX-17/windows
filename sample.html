@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            }
+
+            .expandable-div {
+            width: 200px;
+            height: 100px;
+            background-color: #ddd;
+            transition: width 0.5s ease-in-out;
+            }
+
+            .expand-button:hover + .expandable-div {
+            width: 300px;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="expand-button">Expand</button>
+        <div class="expandable-div">This div will expand when the button is hovered over.</div>
+    </div>
+</body>
+</html>
+
+
+  
